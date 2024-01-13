@@ -103,18 +103,20 @@ function getBotResponse(input) {
             return [maindata.languages[lang]["response"],maindata.languages[lang]['questions'][7]]
             
     }else if(input==maindata.languages[lang]["response"][0] && question==maindata.languages[lang]['questions'][7]){
-            
-        if(validemail(input2)){
-
-            summary_data["Email"]=input2;
-            return [true,maindata.languages[lang]['questions'][9]]
+        console.log(input)            
+        return [true,maindata.languages[lang]['questions'][8]];
+    }else if(input2!="" && question==maindata.languages[lang]['questions'][8]){
+        if(validemail(input)){
+            console.log("ho")
+        summary_data["Email"]=input2;
+        return [true,maindata.languages[lang]['questions'][9]]
 
         }else{
 
-            return [true,maindata.languages[lang]['questions'][8]]
+        return [true,maindata.languages[lang]['questions'][8]]
 
         }
-
+    
     }else if(input==maindata.languages[lang]["response"][1] && question==maindata.languages[lang]['questions'][7]){
         return [true,maindata.languages[lang]['questions'][9]]
 
