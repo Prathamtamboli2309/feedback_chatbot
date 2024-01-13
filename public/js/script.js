@@ -55,7 +55,7 @@ function getBotResponse(input) {
     
     var input2=input.toLowerCase();
 
-    if (input2 in maindata.languages) {
+    if (input2 =="english" || input2 =="hindi" ) {
         summary_data["id"]=randomid()
         summary_data["language"]=input2;     
         lang=input2;
