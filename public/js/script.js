@@ -52,16 +52,16 @@ var lang="";
 function getBotResponse(input) {
 
     var question=document.getElementById(`textbot${value}`).textContent;
-    
+    console.log(input)    
     var input2=input.toLowerCase();
 
-    if (input2 =="english" || input2 =="hindi" ) {
+    if (input2=="english" || input2=="hindi") {
         summary_data["id"]=randomid()
         summary_data["language"]=input2;     
         lang=input2;
-        return [maindata.languages[lang]['report'],maindata.languages[lang]['questions'][0]];        
+        return [maindata.languages[lang]["report"],maindata.languages[lang]['questions'][0]];        
 
-    }else if(input2==maindata.languages[lang]['report'][0] || input2==maindata.languages[lang]['report'][1]){
+    }else if(input==maindata.languages[lang]['report'][0] || input==maindata.languages[lang]['report'][1]){
 
         summary_data["Report"]=input;
         // document.getElementById("textInput").disabled=true;
@@ -102,7 +102,7 @@ function getBotResponse(input) {
             summary_data["Residental_Address"]=input;
             return [maindata.languages[lang]["response"],maindata.languages[lang]['questions'][7]]
             
-    }else if(input2==maindata.languages[lang]["response"][0] && question==maindata.languages[lang]['questions'][7]){
+    }else if(input==maindata.languages[lang]["response"][0] && question==maindata.languages[lang]['questions'][7]){
             
         if(validemail(input2)){
 
@@ -115,7 +115,7 @@ function getBotResponse(input) {
 
         }
 
-    }else if(input2==maindata.languages[lang]["response"][1] && question==maindata.languages[lang]['questions'][7]){
+    }else if(input==maindata.languages[lang]["response"][1] && question==maindata.languages[lang]['questions'][7]){
         return [true,maindata.languages[lang]['questions'][9]]
 
     }else if(summary_data["Report"]==maindata.languages[lang]["Review"][1] && question==maindata.languages[lang]['questions'][9] && input2!=""){
@@ -259,7 +259,14 @@ function sendButton() {
 }
 
 
+$("#textInput").keypress(function (e) {
+    if (e.which == 13) {
+        if($("#textInput").val()!=""){
 
+            getResponse();
+        }   
+    }
+});
 
 
 
