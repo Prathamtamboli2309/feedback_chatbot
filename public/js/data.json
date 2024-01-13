@@ -1,0 +1,758 @@
+{
+    "languages": {
+        "hindi": {
+            "questions": [
+                "रिपोर्ट के प्रकार का चयन करें",
+                "अपना जिला चुनें",
+                "अपने उप-जिले को चुनें",
+                "आपका अच्छा नाम क्या है?",
+                "एक वैध संपर्क नंबर प्रदान करें।",
+                "कृपया एक वैध संपर्क नंबर दर्ज करें",
+                "आपका निवासी पता।",
+                "यदि आप चाहें तो ईमेल प्रदान करें?",
+                "कृपया एक वैध ईमेल प्रदान करें।",
+                "अपनी रिपोर्ट का विवरण करें",
+                "अपनी समीक्षा साझा करें।",
+                "धन्यवाद"
+            ],
+            "Review": [
+                "बहुत बुरा",
+                "बुरा",
+                "सामान्य",
+                "अच्छा",
+                "बहुत अच्छा"
+            ],
+            "report": [
+                "शिकायत",
+                "समीक्षा"
+            ],
+            "response": [
+                "हाँ",
+                "नहीं"
+            ],
+            "distict": [
+                "गंगानगर",
+                "हनुमानगढ़",
+                "बीकानेर",
+                "चूरू",
+                "झुंझुनूं",
+                "अलवर",
+                "भरतपुर",
+                "धौलपुर",
+                "करौली",
+                "सवाई माधोपुर",
+                "दौसा",
+                "जयपुर",
+                "सीकर",
+                "नागौर",
+                "जोधपुर",
+                "जैसलमेर",
+                "बाड़मेर",
+                "जालोर",
+                "सिरोही",
+                "पाली",
+                "अजमेर",
+                "टोंक",
+                "बूंदी",
+                "भीलवाड़ा",
+                "राजसमंद",
+                "डूंगरपुर",
+                "बांसवाड़ा",
+                "चित्तौड़गढ़",
+                "कोटा",
+                "बारां",
+                "झालावाड़",
+                "उदयपुर",
+                "प्रतापगढ़"
+            ],
+            "subdistrict": {
+                "गंगानगर": [
+                    "गंगानगर",
+                    "सादुलशहर",
+                    "पदमपुर",
+                    "राइजिंगनगर",
+                    "अनुपगढ़",
+                    "घड़सना",
+                    "विजयनगर",
+                    "सुरतगढ़"
+                ],
+                "हनुमानगढ़": [
+                    "सांगरिया",
+                    "तिबी",
+                    "हनुमानगढ़",
+                    "पीलीबंगा",
+                    "रावतसर",
+                    "नोहर",
+                    "भादरा"
+                ],
+                "बीकानेर": [
+                    "बीकानेर",
+                    "पुगल",
+                    "लुंकारांसर",
+                    "कोलायत",
+                    "नोखा",
+                    "खाजुवाला",
+                    "छतारगढ़",
+                    "श्रीदुंगरगढ़"
+                ],
+                "चूरू": [
+                    "तारानगढ़",
+                    "राजगढ़",
+                    "सरदारशहर",
+                    "चूरू",
+                    "रतनगढ़",
+                    "सुजांगढ़"
+                ],
+                "झुंझुनूं": [
+                    "झुंझुनूं",
+                    "चिरावा",
+                    "बुहाना",
+                    "खेतड़ी",
+                    "नवलगढ़",
+                    "उदयपुरवती"
+                ],
+                "अलवर": [
+                    "बेहरोर",
+                    "मंडावर",
+                    "कोटकसीम",
+                    "तिजारा",
+                    "किशनगढ़ बास",
+                    "रामगढ़",
+                    "अलवर",
+                    "बांसूर",
+                    "थानागाज़ी",
+                    "राजगढ़",
+                    "लच्छ्मंगढ़",
+                    "कठुमार"
+                ],
+                "भरतपुर": [
+                    "पहाड़ी",
+                    "कामन",
+                    "नागर",
+                    "दीग",
+                    "नाडबाई",
+                    "कुमहेर",
+                    "भरतपुर",
+                    "वीर",
+                    "बयाना",
+                    "रूपबास"
+                ],
+                "धौलपुर": [
+                    "बासेरी",
+                    "बाड़ी",
+                    "सेपाऊ",
+                    "धौलपुर",
+                    "राजाखेड़ा"
+                ],
+                "करौली": [
+                    "तोड़ाभीम",
+                    "नाडोती",
+                    "हिन्डौन",
+                    "करौली",
+                    "मंडरेल",
+                    "सापोत्रा"
+                ],
+                "सवाई माधोपुर": [
+                    "गंगापुर",
+                    "बामनवास",
+                    "मलरणा डूंगर",
+                    "बोनली",
+                    "चौथ का बरवाड़ा",
+                    "माधोपुर",
+                    "खंडार"
+                ],
+                "दौसा": [
+                    "बसवा",
+                    "महवा",
+                    "सिकराई",
+                    "दौसा",
+                    "लालसोट"
+                ],
+                "जयपुर": [
+                    "कोटपुतली",
+                    "वीराटनगर",
+                    "शाहपुरा",
+                    "चोमू",
+                    "फुलेरा (मुख्यालय सांभर)",
+                    "मौज़माबाद",
+                    "फागी",
+                    "सांगनेर",
+                    "जयपुर",
+                    "अम्बर",
+                    "रामगढ़",
+                    "बासी",
+                    "चक्सू"
+                ],
+                "सीकर": [
+                    "फतेहपुर",
+                    "लच्छ्मंगढ़",
+                    "सीकर",
+                    "दांता रामगढ़",
+                    "श्री माधोपुर",
+                    "नीम-का-थाना"
+                ],
+                "नागौर": [
+                    "लाडनू",
+                    "दीदवाना",
+                    "जयल",
+                    "नागौर",
+                    "खींवसर",
+                    "मेरता",
+                    "डेगाना",
+                    "परबतसर",
+                    "माकराना",
+                    "नवा"
+                ],
+                "जोधपुर": [
+                    "फलोदी",
+                    "ओसियाँ",
+                    "भोपालगढ़",
+                    "जोधपुर",
+                    "शेरगढ़",
+                    "लुनी",
+                    "बिलाड़ा"
+                ],
+                "जैसलमेर": [
+                    "जैसलमेर",
+                    "पोकरण",
+                    "फतेहगढ़"
+                ],
+                "बाड़मेर": [
+                    "शेओ",
+                    "बयतू",
+                    "पचपदरा",
+                    "सिवाना",
+                    "गुढ़ा मालानी",
+                    "बाड़मेर",
+                    "रामसर",
+                    "छोटाण"
+                ],
+                "जालोर": [
+                    "सयला",
+                    "अहोर",
+                    "जालोर",
+                    "भीनमाल",
+                    "बागोड़ा",
+                    "सांचोर",
+                    "रानीवाड़ा"
+                ],
+                "सिरोही": [
+                    "शेओगंज",
+                    "सिरोही",
+                    "पिंडवाड़ा",
+                    "अबू रोड",
+                    "रेओदार"
+                ],
+                "पाली": [
+                    "जैतारण",
+                    "रायपुर",
+                    "सोजत",
+                    "रोहट",
+                    "पाली",
+                    "मारवार जंक्शन",
+                    "देसुरी",
+                    "सुमेरपुर",
+                    "बाली"
+                ],
+                "अजमेर": [
+                    "किशनगढ़",
+                    "अजमेर",
+                    "पीसंगन",
+                    "ब्यावर",
+                    "मसूदा",
+                    "नसीराबाद",
+                    "भीनय",
+                    "सरवार",
+                    "केकड़ी"
+                ],
+                "टोंक": [
+                    "मालपुरा",
+                    "पीपलू",
+                    "निवाई",
+                    "टोंक",
+                    "तोड़रायसिंह",
+                    "देवली",
+                    "उनिआरा"
+                ],
+                "बूंदी": [
+                    "हिंडोली",
+                    "नैनवा",
+                    "इंद्रगढ़",
+                    "केशोराईपट्टन",
+                    "बूंदी"
+                ],
+                "भीलवाड़ा": [
+                    "आसिंद",
+                    "हुड़ा",
+                    "शाहपुरा",
+                    "बनेड़ा",
+                    "मंडल",
+                    "रायपुर",
+                    "सहारा",
+                    "भीलवाड़ा",
+                    "कोटड़ी",
+                    "जहाजपुर",
+                    "मंडलगढ़",
+                    "बीजोलिया"
+                ],
+                "राजसमंद": [
+                    "भीम",
+                    "देवगढ़",
+                    "अमेट",
+                    "कुम्भलगढ़",
+                    "राजसमंद",
+                    "रेलमागड़ा",
+                    "नाथद्वारा"
+                ],
+                "डूंगरपुर": [
+                    "डूंगरपुर",
+                    "असपुर",
+                    "सागवाड़ा",
+                    "सिमलवाड़ा"
+                ],
+                "बांसवाड़ा": [
+                    "घाटोल",
+                    "गढ़ी",
+                    "बांसवाड़ा",
+                    "बगीड़ोरा",
+                    "कुशलगढ़"
+                ],
+                "चित्तौड़गढ़": [
+                    "रश्मि",
+                    "गंगरार",
+                    "बेगून",
+                    "रावतभाटा",
+                    "चित्तौड़गढ़",
+                    "कपासन",
+                    "डुंगला",
+                    "भदेसर",
+                    "निम्बहेड़ा",
+                    "बाड़ी सादड़ी"
+                ],
+                "कोटा": [
+                    "पिपलदा",
+                    "डिगॉड़",
+                    "लाडपुरा",
+                    "रामगंज मंडी",
+                    "सांगोद"
+                ],
+                "बारां": [
+                    "मांगरोल",
+                    "अंतह",
+                    "बारां",
+                    "आत्रू",
+                    "किशनगंज",
+                    "शाहबाद",
+                    "छाबड़ा",
+                    "छिपाबरोड़"
+                ],
+                "झालावाड़": [
+                    "खानपुर",
+                    "झालरापतन",
+                    "अकलेरा",
+                    "मनोहर थाना",
+                    "पचपहाड़",
+                    "पिरावा",
+                    "गंगधर"
+                ],
+                "उदयपुर": [
+                    "मावली",
+                    "गोगुंदा",
+                    "कोटड़ा",
+                    "झाड़ोल",
+                    "गिरवा",
+                    "वल्लभनगर",
+                    "लसड़िया",
+                    "सलुम्बार",
+                    "सारदा",
+                    "रिषभदेव",
+                    "खेरवाड़ा"
+                ],
+                "प्रतापगढ़": [
+                    "धरियावड़",
+                    "पीपलखूंट",
+                    "छोटी सादड़ी",
+                    "प्रतापगढ़",
+                    "अर्णोड"
+                ]
+            },
+            "english": {
+                "questions": [
+                    "Choose Type Of Report",
+                    "Select Your District",
+                    "Select Your Sub-District",
+                    "What Is Your Good Name?",
+                    "Provide a Valid Contact Number.",
+                    "Please enter a Valid Contact Number",
+                    "Your Resedential Address.",
+                    "Email If You Want To Provide?",
+                    "Please Provide A Valid Email.",
+                    "Describe Your Report",
+                    "Share Your Review.",
+                    "Thank You!"
+                ],
+                "Review": [
+                    "Very Bad",
+                    "Bad",
+                    "Average",
+                    "Good",
+                    "VeryGood"
+                ],
+                "report": [
+                    "Complaint",
+                    "Review"
+                ],
+                "response": [
+                    "Yes",
+                    "No"
+                ],
+                "distict": [
+                    "Ganganagar",
+                    "Hanumangarh",
+                    "Bikaner",
+                    "Churu",
+                    "Jhunjhunun",
+                    "Alwar",
+                    "Bharatpur",
+                    "Dhaulpur",
+                    "Karauli",
+                    "Sawai Madhopur",
+                    "Dausa",
+                    "Jaipur",
+                    "Sikar",
+                    "Nagaur",
+                    "Jodhpur",
+                    "Jaisalmer",
+                    "Barmer",
+                    "Jalor",
+                    "Sirohi",
+                    "Pali",
+                    "Ajmer",
+                    "Tonk",
+                    "Bundi",
+                    "Bhilwara",
+                    "Rajsamand",
+                    "Dungarpur",
+                    "Banswara",
+                    "Chittaurgarh",
+                    "Kota",
+                    "Baran",
+                    "Jhalawar",
+                    "Udaipur",
+                    "Pratapgarh"
+                ],
+                "subdistrict": {
+                    "Ganganagar": [
+                        "Ganganagar",
+                        "Sadulshahar",
+                        "Padampur",
+                        "Raisinghnagar",
+                        "Anupgarh",
+                        "Gharsana",
+                        "Vijainagar",
+                        "Suratgarh"
+                    ],
+                    "Hanumangarh": [
+                        "Sangaria",
+                        "Tibi",
+                        "Hanumangarh",
+                        "Pilibanga",
+                        "Rawatsar",
+                        "Nohar",
+                        "Bhadra"
+                    ],
+                    "Bikaner": [
+                        "Bikaner",
+                        "Poogal",
+                        "Lunkaransar",
+                        "Kolayat",
+                        "Nokha",
+                        "Khajuwala",
+                        "Chhatargarh",
+                        "Sridungargarh"
+                    ],
+                    "Churu": [
+                        "Taranagar",
+                        "Rajgarh",
+                        "Sardarshahar",
+                        "Churu",
+                        "Ratangarh",
+                        "Sujangarh"
+                    ],
+                    "Jhunjhunun": [
+                        "Jhunjhunun",
+                        "Chirawa",
+                        "Buhana",
+                        "Khetri",
+                        "Nawalgarh",
+                        "Udaipurwati"
+                    ],
+                    "Alwar": [
+                        "Behror",
+                        "Mandawar",
+                        "Kotkasim",
+                        "Tijara",
+                        "Kishangarh Bas",
+                        "Ramgarh",
+                        "Alwar",
+                        "Bansur",
+                        "Thanagazi",
+                        "Rajgarh",
+                        "Lachhmangarh",
+                        "Kathumar"
+                    ],
+                    "Bharatpur": [
+                        "Pahari",
+                        "Kaman",
+                        "Nagar",
+                        "Deeg",
+                        "Nadbai",
+                        "Kumher",
+                        "Bharatpur",
+                        "Weir",
+                        "Bayana",
+                        "Rupbas"
+                    ],
+                    "Dhaulpur": [
+                        "Baseri",
+                        "Bari",
+                        "Sepau",
+                        "Dhaulpur",
+                        "Rajakhera"
+                    ],
+                    "Karauli": [
+                        "Todabhim",
+                        "Nadoti",
+                        "Hindaun",
+                        "Karauli",
+                        "Mandrail",
+                        "Sapotra"
+                    ],
+                    "Sawai Madhopur": [
+                        "Gangapur",
+                        "Bamanwas",
+                        "Malarna Doongar",
+                        "Bonli",
+                        "Chauth Ka Barwara",
+                        "Madhopur",
+                        "Khandar"
+                    ],
+                    "Dausa": [
+                        "Baswa",
+                        "Mahwa",
+                        "Sikrai",
+                        "Dausa",
+                        "Lalsot"
+                    ],
+                    "Jaipur": [
+                        "Kotputli",
+                        "Viratnagar",
+                        "Shahpura",
+                        "Chomu",
+                        "Phulera (Hq.Sambhar)",
+                        "Mauzamabad",
+                        "Phagi",
+                        "Sanganer",
+                        "Jaipur",
+                        "Amber",
+                        "Ramgarh",
+                        "Bassi",
+                        "Chaksu"
+                    ],
+                    "Sikar": [
+                        "Fatehpur",
+                        "Lachhmangarh",
+                        "Sikar",
+                        "Danta Ramgarh",
+                        "Sri Madhopur",
+                        "Neem-Ka-Thana"
+                    ],
+                    "Nagaur": [
+                        "Ladnu",
+                        "Didwana",
+                        "Jayal",
+                        "Nagaur",
+                        "Kheenvsar",
+                        "Merta",
+                        "Degana",
+                        "Parbatsar",
+                        "Makrana",
+                        "Nawa"
+                    ],
+                    "Jodhpur": [
+                        "Phalodi",
+                        "Osian",
+                        "Bhopalgarh",
+                        "Jodhpur",
+                        "Shergarh",
+                        "Luni",
+                        "Bilara"
+                    ],
+                    "Jaisalmer": [
+                        "Jaisalmer",
+                        "Pokaran",
+                        "Fatehgarh"
+                    ],
+                    "Barmer": [
+                        "Sheo",
+                        "Baytoo",
+                        "Pachpadra",
+                        "Siwana",
+                        "Gudha Malani",
+                        "Barmer",
+                        "Ramsar",
+                        "Chohtan"
+                    ],
+                    "Jalor": [
+                        "Sayla",
+                        "Ahore",
+                        "Jalor",
+                        "Bhinmal",
+                        "Bagora",
+                        "Sanchore",
+                        "Raniwara"
+                    ],
+                    "Sirohi": [
+                        "Sheoganj",
+                        "Sirohi",
+                        "Pindwara",
+                        "Abu Road",
+                        "Reodar"
+                    ],
+                    "Pali": [
+                        "Jaitaran",
+                        "Raipur",
+                        "Sojat",
+                        "Rohat",
+                        "Pali",
+                        "Marwar Junction",
+                        "Desuri",
+                        "Sumerpur",
+                        "Bali"
+                    ],
+                    "Ajmer": [
+                        "Kishangarh",
+                        "Ajmer",
+                        "Peesangan",
+                        "Beawar",
+                        "Masuda",
+                        "Nasirabad",
+                        "Bhinay",
+                        "Sarwar",
+                        "Kekri"
+                    ],
+                    "Tonk": [
+                        "Malpura",
+                        "Peeplu",
+                        "Niwai",
+                        "Tonk",
+                        "Todaraisingh",
+                        "Deoli",
+                        "Uniara"
+                    ],
+                    "Bundi": [
+                        "Hindoli",
+                        "Nainwa",
+                        "Indragarh",
+                        "Keshoraipatan",
+                        "Bundi"
+                    ],
+                    "Bhilwara": [
+                        "Asind",
+                        "Hurda",
+                        "Shahpura",
+                        "Banera",
+                        "Mandal ",
+                        "Raipur",
+                        "Sahara",
+                        "Bhilwara",
+                        "Kotri",
+                        "Jahazpur",
+                        "Mandalgarh",
+                        "Beejoliya"
+                    ],
+                    "Rajsamand": [
+                        "Bhim",
+                        "Deogarh",
+                        "Amet",
+                        "Kumbhalgarh",
+                        "Rajsamand",
+                        "Railmagra",
+                        "Nathdwara"
+                    ],
+                    "Dungarpur": [
+                        "Dungarpur",
+                        "Aspur",
+                        "Sagwara",
+                        "Simalwara"
+                    ],
+                    "Banswara": [
+                        "Ghatol",
+                        "Garhi",
+                        "Banswara",
+                        "Bagidora",
+                        "Kushalgarh"
+                    ],
+                    "Chittaurgarh": [
+                        "Rashmi",
+                        "Gangrar",
+                        "Begun",
+                        "Rawatbhata",
+                        "Chittaurgarh",
+                        "Kapasan",
+                        "Dungla",
+                        "Bhadesar",
+                        "Nimbahera",
+                        "Bari Sadri"
+                    ],
+                    "Kota": [
+                        "Pipalda",
+                        "Digod",
+                        "Ladpura",
+                        "Ramganj Mandi",
+                        "Sangod"
+                    ],
+                    "Baran": [
+                        "Mangrol",
+                        "Antah",
+                        "Baran",
+                        "Atru",
+                        "Kishanganj",
+                        "Shahbad",
+                        "Chhabra",
+                        "Chhipabarod"
+                    ],
+                    "Jhalawar": [
+                        "Khanpur",
+                        "Jhalrapatan",
+                        "Aklera",
+                        "Manohar Thana",
+                        "Pachpahar",
+                        "Pirawa",
+                        "Gangdhar"
+                    ],
+                    "Udaipur": [
+                        "Mavli",
+                        "Gogunda",
+                        "Kotra",
+                        "Jhadol",
+                        "Girwa",
+                        "Vallabhnagar",
+                        "Lasadiya",
+                        "Salumbar",
+                        "Sarada",
+                        "Rishabhdeo",
+                        "Kherwara"
+                    ],
+                    "Pratapgarh": [
+                        "Dhariawad",
+                        "Peepalkhoont",
+                        "Chhoti Sadri",
+                        "Pratapgarh",
+                        "Arnod"
+                    ]
+                }
+            }
+        }
+    }
+}
