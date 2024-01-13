@@ -312,7 +312,7 @@ function displaydata(data){
 
 
 function senddatacomplaint(summary_data){
-    var url="http://localhost:3000/complaintpost";
+    var url="https://feedback-chatbot.onrender.com/complaintpost";
 
     fetch(url,{
         method:"POST",
@@ -341,7 +341,7 @@ function senddatacomplaint(summary_data){
 }
 
 function senddatareview(summary_data){
-    var url="http://localhost:3000/reviewpost";
+    var url="https://feedback-chatbot.onrender.com/reviewpost";
 
     fetch(url,{
         method:"POST",
