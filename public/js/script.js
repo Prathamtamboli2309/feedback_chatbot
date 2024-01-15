@@ -120,23 +120,32 @@ function getBotResponse(input) {
     }else if(input==maindata.languages[lang]["response"][1] && question==maindata.languages[lang]['questions'][7]){
         return [true,maindata.languages[lang]['questions'][9]]
 
-    }else if(summary_data["Report"]==maindata.languages[lang]["Review"][1] && question==maindata.languages[lang]['questions'][9] && input2!=""){
+    }else if(summary_data["Report"]==maindata.languages[lang]["report"][1] && question==maindata.languages[lang]['questions'][9] && input2!=""){
         
         summary_data["Description"]=input;
         
         return [maindata.languages[lang]["Review"],maindata.languages[lang]['questions'][10]];
 
-    }else if(question==maindata.languages[lang]['questions'][9] && input2!=""){
+    }else if(question==maindata.languages[lang]['questions'][9] && input2!="" && summary_data["Report"]==maindata.languages[lang]["report"][0]=="Complaint"){
 
         
-        summary_data["Description"]=input;
-        
+        // summary_data["Description"]=input;
         senddatacomplaint(summary_data);        
+        return [true,maindata.languages[lang]['questions'][11]]
+    }else if(question==maindata.languages[lang]['questions'][10] && summary_data["Report"]==maindata.languages[lang]["report"][1]){
+
+        
+        // summary_data["Description"]=input;
+        
+        summary_data["Review"]=input
+        
+        senddatareview(summary_data);
         return [true,maindata.languages[lang]['questions'][11]]
     }
     else{
-        if(summary_data["Report"]=="Review"){summary_data["Review"]=input}
     
+        
+       
         senddatareview(summary_data);
 
         return [true,maindata.languages[lang]['questions'][11]]
@@ -312,7 +321,7 @@ function displaydata(data){
 
 
 function senddatacomplaint(summary_data){
-    var url="https://feedback-chatbot.onrender.com/complaintpost";
+    var url="http://localhost:3000/complaintpost";
 
     fetch(url,{
         method:"POST",
@@ -335,13 +344,12 @@ function senddatacomplaint(summary_data){
            
         })
     })
-    .then(response=>console.log("posted")) 
-    showCustomAlert()
-
+    .then(response=> showCustomAlert()) 
+    
 }
 
 function senddatareview(summary_data){
-    var url="https://feedback-chatbot.onrender.com/reviewpost";
+    var url="http://localhost:3000/reviewpost";
 
     fetch(url,{
         method:"POST",
@@ -366,8 +374,8 @@ function senddatareview(summary_data){
            
         })
     })
-    .then(response=>console.log("posted"))
-    showCustomAlert()
+    .then(response=> showCustomAlert())
+   
 
 }
 
