@@ -132,7 +132,8 @@ function getBotResponse(input) {
     }else if(summary_data["Report"]==maindata.languages[lang]["report"][1] && question==maindata.languages[lang]['questions'][9] && input2!=""){
         
         summary_data["description"]=input;
-        
+        console.log("hello")
+        console.log(summary_data)
         return [maindata.languages[lang]["Review"],maindata.languages[lang]['questions'][10]];
 
     }else if(question==maindata.languages[lang]['questions'][9] && input2!="" && summary_data["Report"]==maindata.languages[lang]["report"][0]){
@@ -141,7 +142,7 @@ function getBotResponse(input) {
         summary_data["description"]=input;
         // summary_data["Description"]=input;
         senddatacomplaint(summary_data);        
-        console.log(summary_data)
+        // console.log(summary_data)
         return [true,maindata.languages[lang]['questions'][11]]
     }else if(question==maindata.languages[lang]['questions'][10] && summary_data["Report"]==maindata.languages[lang]["report"][1]){
 
@@ -326,7 +327,7 @@ function displaydata(data){
 
 
 function senddatacomplaint(summary_data){
-    var url="https://feedback-chatbot.onrender.com/complaintpost";
+    var url="http://localhost:3000/complaintpost";
 
     fetch(url,{
         method:"POST",
@@ -349,12 +350,12 @@ function senddatacomplaint(summary_data){
            
         })
     })
-    .then(response=>console.log("post") )
-     showCustomAlert()
+    .then(response=> console.log("post")) 
+    showCustomAlert()
 }
 
 function senddatareview(summary_data){
-    var url="https://feedback-chatbot.onrender.com/reviewpost";
+    var url="http://localhost:3000/reviewpost";
 
     fetch(url,{
         method:"POST",
@@ -366,7 +367,7 @@ function senddatareview(summary_data){
         body:JSON.stringify({
             "id":summary_data["id"],
             "contact": summary_data["Contact"],
-            "description": summary_data["Description"],
+            "description": summary_data["description"],
             "district": summary_data["district"],
             "email": summary_data["Email"],
             "feedbackdate": summary_data["Feedback_Date"],
@@ -379,8 +380,8 @@ function senddatareview(summary_data){
            
         })
     })
-    .then(response=>console.log("post") )
-     showCustomAlert()
+    .then(response=> showCustomAlert())
+   
 
 }
 
