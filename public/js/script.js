@@ -349,7 +349,7 @@ function senddatacomplaint(summary_data){
            
         })
     })
-    .then(response=>console.log("post") 
+    .then(response=>console.log("post") )
      showCustomAlert()
 }
 
@@ -379,7 +379,7 @@ function senddatareview(summary_data){
            
         })
     })
-    .then(response=>console.log("post") 
+    .then(response=>console.log("post") )
      showCustomAlert()
 
 }
