@@ -349,8 +349,8 @@ function senddatacomplaint(summary_data){
            
         })
     })
-    .then(response=> showCustomAlert()) 
-    
+    .then(response=>console.log("post") 
+     showCustomAlert()
 }
 
 function senddatareview(summary_data){
@@ -379,8 +379,8 @@ function senddatareview(summary_data){
            
         })
     })
-    .then(response=> showCustomAlert())
-   
+    .then(response=>console.log("post") 
+     showCustomAlert()
 
 }
 
