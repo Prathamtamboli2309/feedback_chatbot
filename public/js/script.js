@@ -48,7 +48,7 @@ function validemail(email){
 }
 var summary_data={}
 var lang="";
-
+const inputBox = document.getElementById('textInput');
 function getBotResponse(input) {
 
     var question=document.getElementById(`textbot${value}`).textContent;
@@ -75,7 +75,7 @@ function getBotResponse(input) {
     } else if (question==maindata.languages[lang]['questions'][2] && input2!="") {
         
         summary_data["subdistrict"]=input;
-       
+        
         return [true,maindata.languages[lang]['questions'][3]]
 
     }else if (input2 != "" && question==maindata.languages[lang]['questions'][3]) {
@@ -100,14 +100,16 @@ function getBotResponse(input) {
     }else if(input2!="" && question==maindata.languages[lang]['questions'][6] || (input2 != "" && question==maindata.languages[lang]['questions'][5])){
 
             summary_data["Residental_Address"]=input;
+          
             return [maindata.languages[lang]["response"],maindata.languages[lang]['questions'][7]]
             
     }else if(input==maindata.languages[lang]["response"][0] && question==maindata.languages[lang]['questions'][7]){
-        console.log(input)            
+                 
         return [true,maindata.languages[lang]['questions'][8]];
     }else if(input2!="" && question==maindata.languages[lang]['questions'][8]){
+
         if(validemail(input)){
-            console.log("ho")
+            
         summary_data["Email"]=input2;
         return [true,maindata.languages[lang]['questions'][9]]
 
@@ -118,7 +120,7 @@ function getBotResponse(input) {
         }
     
     }else if(input==maindata.languages[lang]["response"][1] && question==maindata.languages[lang]['questions'][7]){
-        
+       
         return [true,maindata.languages[lang]['questions'][9]]
 
     
@@ -132,8 +134,7 @@ function getBotResponse(input) {
     }else if(summary_data["Report"]==maindata.languages[lang]["report"][1] && question==maindata.languages[lang]['questions'][9] && input2!=""){
         
         summary_data["description"]=input;
-        console.log("hello")
-        console.log(summary_data)
+       
         return [maindata.languages[lang]["Review"],maindata.languages[lang]['questions'][10]];
 
     }else if(question==maindata.languages[lang]['questions'][9] && input2!="" && summary_data["Report"]==maindata.languages[lang]["report"][0]){
@@ -203,7 +204,7 @@ function firstBotMessage() {
     }
     
     document.getElementById("botStarterMessage").innerHTML = `<p class="botText" ><span id="textbot${value}">${firstMessage}<br>Please Select A language</span></p>`;
-    
+   
     var time=getTime()
     btn_select(["English","Hindi"])
     let chat=document.getElementById("chat-timestamp")
@@ -346,6 +347,9 @@ function senddatacomplaint(summary_data){
             "name": summary_data["name"],
             "subdistrict": summary_data["subdistrict"],
             "Residental_Address":summary_data["Residental_Address"],
+            "status":"Reject",
+            "publish":"YES",
+            "locationdata":locationdata
 
            
         })
@@ -376,7 +380,10 @@ function senddatareview(summary_data){
             "subdistrict": summary_data["subdistrict"],
             
             "Residental_Address":summary_data["Residental_Address"],
-            "Review":summary_data["Review"]
+            "Review":summary_data["Review"],
+            "status":"Reject",
+            "publish":"YES",
+            "locationdata":locationdata
            
         })
     })
@@ -391,3 +398,84 @@ function scroll(){
         chatbox.scrollTop=chatbox.scrollHeight;
     }
 }
+var locationdata;
+
+$(document).ready(()=>{
+    $.getJSON("https://api.ipify.org?format=json",
+        function (data) {
+            console.log(data["ip"])
+        // Displayin IP address on screen
+        var getlocation=`http://ip-api.com/json/${data["ip"]}`
+        console.log(getlocation)
+     
+  fetchData(getlocation)
+    .then(data => {
+      // Process the retrieved data
+    //   console.log('Data:', data);
+      locationdata = JSON.stringify(data);
+      console.log(locationdata)
+    });
+    })
+});
+
+function fetchData(url) {
+    // Using the fetch function to make a GET request
+    return fetch(url)
+      .then(response => {
+        // Checking if the response status is OK (200)
+        if (!response.ok) {
+          throw new Error(`Network response was not ok: ${response.statusText}`);
+        }
+        // Parsing the JSON data from the response
+        return response.json();
+      })
+      .catch(error => {
+        // Handling any errors that occurred during the fetch
+        console.error('Error fetching data:', error);
+      });
+  }
+  
+  // Example usage:
+  
+  
+//voice assistance code
+document.addEventListener('DOMContentLoaded', () => {
+    const startButton = document.getElementById('startButton');
+    const outputElement = document.getElementById('textInput');
+
+    // Check if the browser supports the Web Speech API
+    if ('SpeechRecognition' in window || 'webkitSpeechRecognition' in window) {
+        const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+
+        recognition.lang = 'en-US';
+
+        recognition.onstart = () => {
+            outputElement.textContent = 'Listening...';
+        };
+
+        recognition.onresult = (event) => {
+            const result = event.results[0][0].transcript;
+            outputElement.textContent = `You said: ${result}`;
+            
+            processCommand(result);
+        };
+
+        recognition.onerror = (event) => {
+            outputElement.textContent = `Error: ${event.error}`;
+        };
+
+        startButton.addEventListener('click', () => {
+            recognition.start();
+        });
+    } else {
+        outputElement.textContent = 'Speech recognition is not supported in this browser.';
+    }
+
+    function processCommand(command) {
+        // You can implement your own logic to handle different commands
+        // For simplicity, let's just alert the command for demonstration purposes
+        // alert(`Command: ${command}`);
+        outputElement.value = command;
+        outputElement.disabled = true;
+    }
+});
