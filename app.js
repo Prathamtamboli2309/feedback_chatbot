@@ -43,18 +43,19 @@ con.connect((err)=>{
 
 app.post('/complaintpost',(req,res)=>{
     const id=req.body.id;
-   
     const district=req.body.district;
     const subdistrict=req.body.subdistrict;
     const name=req.body.name;
     const email=req.body.email;
     const contact=req.body.contact;
     const description=req.body.description;
-   
     const feedbackdate=req.body.feedbackdate;
     const Residental_Address=req.body.Residental_Address;
-    
-    con.query("insert into Feedback_Complaint values(?,?,?,?,?,?,?,?,?)",[id,district,subdistrict,name,email,contact,description,feedbackdate,Residental_Address],(err,result)=>{
+    const status=req.body.status;
+    const publish=req.body.publish;
+    const locationdata=req.body.locationdata;
+    console.log(description)
+    con.query("insert into Feedback_Complaint values(?,?,?,?,?,?,?,?,?,?,?,?)",[id,district,subdistrict,name,email,contact,description,feedbackdate,Residental_Address,status,publish,locationdata],(err,result)=>{
         if(err){
             console.log(err)
         }else{
@@ -74,8 +75,11 @@ app.post('/reviewpost',(req,res)=>{
     const feedbackdate=req.body.feedbackdate;
     const Residental_Address=req.body.Residental_Address;
     const Review=req.body.Review;
+    const status=req.body.status;
+    const publish=req.body.status;
+    const locationdata=req.body.locationdata;
 
-    con.query("insert into Feedback_review values(?,?,?,?,?,?,?,?,?,?)",[id,district,subdistrict,name,email,contact,description,Review,feedbackdate,Residental_Address],(err,result)=>{
+    con.query("insert into Feedback_review values(?,?,?,?,?,?,?,?,?,?,?,?,?)",[id,district,subdistrict,name,email,contact,description,Review,feedbackdate,Residental_Address,status,publish,locationdata],(err,result)=>{
         if(err){
             console.log(err)
         }else{
